@@ -1,0 +1,19 @@
+---
+  - hosts: windows-stratus
+    tasks:
+      - name: get whoami information
+        win_whoami:
+
+      - name: Install multiple packages
+        win_chocolatey:
+          name:
+            - procexp
+            - putty
+            - windirstat
+            - git
+            - babun
+            - docker
+            - docker-desktop
+            - docker-kitematic
+            - googlechrome
+          state: present

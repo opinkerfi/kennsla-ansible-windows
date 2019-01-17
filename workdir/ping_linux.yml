@@ -1,0 +1,5 @@
+---
+  - hosts: linux
+    tasks:
+      - name: do a basic ping pong test
+        ping:

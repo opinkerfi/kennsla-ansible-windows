@@ -1,10 +1,11 @@
-LABEL "com.example.vendor"="Opin Kerfi"
-LABEL maintainer="samuel@ok.is"
-LABEL version="0.1"
-LABEL description="Ansible container sem hægt er að nota td. fyrir þróun á ansible uppskriftum."
-
 FROM centos:7
 ENV container docker
+
+LABEL "com.example.vendor"="Opin Kerfi"
+LABEL maintainer="samuel@ok.is"
+LABEL version="0.2"
+LABEL description="Ansible container sem hægt er að nota td. fyrir þróun á ansible uppskriftum."
+
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
 systemd-tmpfiles-setup.service ] || rm -f $i; done); \
 rm -f /lib/systemd/system/multi-user.target.wants/*;\

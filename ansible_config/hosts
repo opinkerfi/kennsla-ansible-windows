@@ -44,6 +44,7 @@
 
 [windows]
 WindowsServer  ansible_host=127.0.0.1
+WindowsServer2  ansible_host=172.17.0.1
 
 [windows:vars]
 ansible_user=vagrant
@@ -52,3 +53,15 @@ ansible_port=55986
 ansible_connection=winrm
 ansible_winrm_transport=ntlm
 ansible_winrm_server_cert_validation=ignore
+
+[windows-stratus]
+sammi-windows-ansible-kennsla  ansible_host=94.142.158.62
+
+[windows-stratus:vars]
+ansible_user=ansible
+ansible_password=Sveipur.321
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_transport=ntlm
+ansible_winrm_server_cert_validation=ignore
+
